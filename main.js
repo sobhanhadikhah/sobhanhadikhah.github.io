@@ -194,12 +194,12 @@ student.forEach((nameof,index) => {
 */
 var usernamesfade = [
     {
-        nmae:"sina",
-        fade:"to gavi"
+        nmaeo:"sina",
+        fade:"you are chosen one..."
     },
     {
-        name:"aria",
-        fade: "kos kharet"
+        nmaeo:"aria",
+        fade: "remember who you are..."
     }
 ] ;
 var valuuser = [
@@ -211,28 +211,39 @@ var valuuser = [
         pass:"a1234"
     }
 ];
+var wakeh1 = document.getElementById("yek");
 var usss = prompt("enter user");
 var passman = prompt("enter pass");
-var koni = null;
+var koni = false;
 function kos(user,pass){
-    for (var index = 0; index < valuuser.length ; index++) {
-        if (user===valuuser[index].usernmae&&pass===valuuser[index].pass) {
+    for (var i = 0; i < valuuser.length ; i++) {
+        if (user===valuuser[i].usernmae&&pass===valuuser[i].pass) {
             
-            return true;
-        }else{
-             return false;
+           return true
         }
         
         
+        
     }
+    return false;
 
 };
-function asli() {
-    if (kos(usss,passman)) {
-        alert("yes")
+
+function asli(user,pass) {
+    var x =kos(usss,passman);
+    if (x===true) {
+        alert("welcome to matrix user "+usss);
+            usernamesfade.forEach((arr,io) => {
+                wakeh1.innerHTML = "wake up " + usss +"..." ;
+                document.write(arr.nmaeo+"<br>"+"("+arr.fade+")"+"<br>");
+            });
+
     }else{
-        alert("no");
+        
+        
+       var pop =   confirm("something wrong wants try agine?");
+        
     }
     
 }
-asli();
+asli(usss,passman);

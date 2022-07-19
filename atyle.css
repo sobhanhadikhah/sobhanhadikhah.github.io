@@ -1,5 +1,17 @@
 body{
+    font-family: 'Press Start 2P', cursive;
     background-color: black;
-    direction: rtl;
+    direction: ltr;
     color: #00FF41 ;
+    text-align: center;
+
+}
+button{
+    padding: 5px;
+    background-color: #00FF41;
+    border-radius:  5px;
+    cursor: pointer;
+}
+.pad h1{
+    padding: 1em;
 }
