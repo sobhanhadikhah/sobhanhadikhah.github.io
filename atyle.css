@@ -8,9 +8,6 @@ body{
 
 }
 nav{
-    border-bottom-right-radius:  5px;
-    border-bottom-left-radius:  5px;
-
     display: flex;
     background-color: #00FF41;
 }
@@ -117,7 +114,7 @@ label p{
     }
     li {
         
-        padding: 0.5em;
+        padding: 0.3em;
 
         
     
@@ -161,3 +158,4 @@ label p{
   .apply-shake {
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   }
+

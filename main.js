@@ -374,17 +374,25 @@ var databaseuseras = [
         passwordd:"saman12345678"
     }
 ];
+
 var out = document.getElementById("outs");
 function removesins() {
     out.remove();
 };
 
 
+
 function getelemnts() {
-    var getuser = document.getElementById("usernmameinput").value;
-var getpass = document.getElementById("passsinput").value;
+    //for get the checkbox//
+     xoxo = document.querySelector('#checkboxagree').checked;
+     // value for get inputs and without var for use in any function //        
+     getuser = document.getElementById("usernmameinput").value;
+     getpass = document.getElementById("passsinput").value;
     for (let i = 0; i < databaseuseras.length; i++) {
-        if (getuser===databaseuseras[i].usera&&getpass===databaseuseras[i].passwordd) {
+        if (getuser===databaseuseras[i].usera&&getpass===databaseuseras[i].passwordd&&xoxo ===true) {
+            
+
+            
             return true;
             
         }
@@ -395,20 +403,27 @@ var getpass = document.getElementById("passsinput").value;
 var sigmatext = document.getElementById("sigin");
 var siuptext = document.getElementById("sigup");
 var btnsubmit = document.getElementById("btnsub");
+// add events listener for click some item without method in html //
 btnsubmit.addEventListener("click", (e) => {
     e.preventDefault();
     if (getelemnts()===true) {
+            // remove with () for removing item//
             out.remove();            
             wrongalert.innerHTML = null;
-            sigmatext.innerHTML = "profile";
             siuptext.remove();
+            sigmatext.innerHTML = getuser ;
+            
+            
     }else{
         wrongalert.innerHTML = "somthing wrong";
+        // for add class css in any item
         wrongalert.classList.add("apply-shake");
         wrongalert.addEventListener("animationend", (e) => {
-            wrongalert.classList.remove("apply-shake");
-
+            // for remove any item
+        wrongalert.classList.remove("apply-shake");
+            
         });
     }
 });
+
 
