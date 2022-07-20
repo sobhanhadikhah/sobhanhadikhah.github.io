@@ -359,6 +359,7 @@ var x = document.createElement("p");
 x.innerHTML = "wants to you ";
 
 */
+var wrongalert = document.getElementById("tellwrong");
 var databaseuseras = [
     {
         usera:"shomplex",
@@ -391,11 +392,23 @@ var getpass = document.getElementById("passsinput").value;
     }
     return false;
 };
-function signin() {
- 
+var sigmatext = document.getElementById("sigin");
+var siuptext = document.getElementById("sigup");
+var btnsubmit = document.getElementById("btnsub");
+btnsubmit.addEventListener("click", (e) => {
+    e.preventDefault();
     if (getelemnts()===true) {
-            alert("yes");
+            out.remove();            
+            wrongalert.innerHTML = null;
+            sigmatext.innerHTML = "profile";
+            siuptext.remove();
     }else{
-        alert("no");
+        wrongalert.innerHTML = "somthing wrong";
+        wrongalert.classList.add("apply-shake");
+        wrongalert.addEventListener("animationend", (e) => {
+            wrongalert.classList.remove("apply-shake");
+
+        });
     }
-}
+});
+

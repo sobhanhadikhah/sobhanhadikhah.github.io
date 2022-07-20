@@ -5,6 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>facebook</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel='stylesheet' type='text/css' media='screen' href='atyle.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +27,9 @@
 
                 <li><a href="#" >diriction</a></li>
 
-                <li><a href="#" >sigin</a></li>
+                <li id="sigin" ><a href="#" >sigin</a></li>
 
-                <li class="push" ><a  href="#" >signup</a></li>
+                <li  id="sigup" class="push" ><a  href="#" >signup</a></li>
 
             </ul>
         </nav>
@@ -35,11 +39,18 @@
 <lottie-player  src="https://assets9.lottiefiles.com/packages/lf20_bacf0pmj.json"  background="transparent"  speed="0.5"    loop  autoplay></lottie-player>
 
     </div>
-
-    <div class="inputslist" id="outs">
+    
+    <div class="inputslist animate__animated animate__zoomIn"  id="outs">
         <label>
             <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_x5yfDN.json"  background="transparent"  speed="0.7"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
         </label>
+        <label  >
+            
+            <p id="tellwrong"  >
+         
+            </p>  
+            
+       </label>
         <label>
             
             <p>username</p>
@@ -54,14 +65,15 @@
 
         </label>
         <br>
-        <label>
+        <label >
             
-             <p>i agree condishen. <input type="checkbox" > </p>  
+             <p>i agree condishen.  <input type="checkbox" > </p>  
              
         </label>
+       
         <br>
         <label>
-            <button  onclick="signin()" >
+            <button id="btnsub"   >
                 signin
             </button>
         </label>
