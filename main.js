@@ -191,7 +191,7 @@ do {
 student.forEach((nameof,index) => {
     document.write(index+1+" "+nameof+"<br>");    
 } );
-*/
+*
 var usernamesfade = [
     {
         nmaeo:"sina",
@@ -246,4 +246,116 @@ function asli(user,pass) {
     }
     
 }
-asli(usss,passman);
+asli(usss,passman);*/
+var listofuser = [
+    {
+        usernmae: "sobhan",
+        paswword: "123"
+    },
+    {
+        usernmae: "sali",
+        paswword: "1234"
+    },
+    {
+        usernmae: "parsa",
+        paswword: "12345"
+    },
+];
+var listoffaade = [
+    {
+        user:"matin",
+        fade:"hi dude"
+    },
+    {
+        user:"iraj",
+        fade:"salam"
+
+    },
+    {
+        user:"samanta",
+        fade:"im am robot"
+    }
+    
+];
+/*
+function signin() {
+    var getu = prompt("enter username:");
+    var getp = prompt("enter password:");
+    function bet(user,pass) {
+        for (let index = 0; index < listofuser.length; index++) {
+            if (user===listofuser[index].usernmae&&pass===listofuser[index].paswword) {
+                return true;   
+                
+            }
+            return false;
+            
+        }
+        
+    }
+
+    
+    function torf() {
+        var nodep = document.createElement("p"); 
+        if (bet(getu,getp)===true) {
+                listoffaade.forEach(fades  => {
+                    var btn = document.createElement("p");  
+                    btn.innerHTML = "<br>"+fades.user+"<br>"+fades.fade+"<hr>"  
+                    document.body.appendChild(btn);                
+                    
+                    
+                });
+        }else{
+            alert("wrong");
+        }
+        
+    }
+    torf();
+}
+*
+
+function signin(){
+
+    var getuser = prompt("username:");
+    var getpass = prompt("password");
+    for (let i = 0; i < listofuser.length; i++) {
+            if (getuser===listofuser[i].usernmae&&getpass===listofuser[i].paswword) {
+                var hj =  listofuser[i].usernmae 
+                return true;
+                
+            }
+            
+        
+    }
+    return false;
+
+    
+
+}
+var textwake = document.getElementById("yek");
+var btnsig = document.getElementById("lok");
+function getitsignin(){
+    var elemttruyafale = signin();
+    if(elemttruyafale===true ){
+            
+            listoffaade.forEach((fades) => {
+            var textp = document.createElement("p");
+            textp.innerHTML = "<hr>" + "<br>" + fades.user +"<br>"+ fades.fade  +"<br>" + "<hr>";
+            document.body.appendChild(textp);
+            btnsig.remove();
+            textwake.innerHTML = "wake up...";
+        });
+        
+    }else {
+        var opp = confirm("your password or username is wrong, try agine ?");
+        if(opp===true){
+            getitsignin();
+        }else{ 
+
+        }
+        
+    }
+}
+var x = document.createElement("p");
+x.innerHTML = "wants to you ";
+
+*/
