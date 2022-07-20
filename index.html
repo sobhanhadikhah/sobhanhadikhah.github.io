@@ -31,24 +31,26 @@
         </nav>
 
     </div>
-    <div class="backa" >
-<lottie-player  src="https://assets9.lottiefiles.com/packages/lf20_bacf0pmj.json"  background="transparent"  speed="2"    loop  autoplay></lottie-player>
+    <div class="backa"  >
+<lottie-player  src="https://assets9.lottiefiles.com/packages/lf20_bacf0pmj.json"  background="transparent"  speed="0.5"    loop  autoplay></lottie-player>
 
     </div>
 
-    <div class="inputslist" >
-        
+    <div class="inputslist" id="outs">
+        <label>
+            <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_x5yfDN.json"  background="transparent"  speed="0.7"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        </label>
         <label>
             
-            <p>username:</p>
+            <p>username</p>
             
-            <input type="text"  minlength="5" maxlength="12"  >
+            <input id="usernmameinput" type="text"   >
         </label>
         <br>
         <label>
-            <p>password:</p>
+            <p>password</p>
             
-        <input type="password": minlength="8" maxlength="15" >
+        <input id="passsinput" type="password":  >
 
         </label>
         <br>
@@ -59,7 +61,7 @@
         </label>
         <br>
         <label>
-            <button>
+            <button  onclick="signin()" >
                 signin
             </button>
         </label>
@@ -68,7 +70,7 @@
 
     </div>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
+
     <script src='main.js'></script>
 </body>
 </html>

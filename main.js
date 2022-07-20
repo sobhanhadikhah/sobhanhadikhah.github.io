@@ -359,3 +359,43 @@ var x = document.createElement("p");
 x.innerHTML = "wants to you ";
 
 */
+var databaseuseras = [
+    {
+        usera:"shomplex",
+        passwordd:"12345678"
+    },
+    {
+        usera:"sobhan",
+        passwordd:"a123"
+    },
+    {
+        usera:"saman007",
+        passwordd:"saman12345678"
+    }
+];
+var out = document.getElementById("outs");
+function removesins() {
+    out.remove();
+};
+
+
+function getelemnts() {
+    var getuser = document.getElementById("usernmameinput").value;
+var getpass = document.getElementById("passsinput").value;
+    for (let i = 0; i < databaseuseras.length; i++) {
+        if (getuser===databaseuseras[i].usera&&getpass===databaseuseras[i].passwordd) {
+            return true;
+            
+        }
+        
+    }
+    return false;
+};
+function signin() {
+ 
+    if (getelemnts()===true) {
+            alert("yes");
+    }else{
+        alert("no");
+    }
+}

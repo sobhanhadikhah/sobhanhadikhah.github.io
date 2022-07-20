@@ -53,18 +53,7 @@ cursor: pointer;
     
 }
 
-@media only screen and (max-width:600px){
-    .navimain a{
-        font-size: smaller;
-    }
-    li {
-        
-        padding: 0.5em;
 
-        
-    
-    }   
-};
 
 .inputslist  {
     display: grid;
@@ -72,7 +61,7 @@ cursor: pointer;
     
 }
 .inputslist label{
-    margin-top: 2em;
+    margin-top: 0.3em;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -99,13 +88,42 @@ cursor: pointer;
     color: black;
 }
 .backa{
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
 
     position: absolute;
     z-index: -1;
 }
+label img{
+    display: grid;
+    width: auto;
+    height: auto;
+}
+label p{
+    text-align: center;
+}
+@media only screen and (max-width:600px){
+    .navimain a{
+        font-size: smaller;
+    }
+    li {
+        
+        padding: 0.5em;
+
+        
+    
+    }
+    .backa{       
+    display: none
+    }
+    label img{
+        display: grid;
+        width: 30vh;
+        height: 30vh;
+    }   
+};
