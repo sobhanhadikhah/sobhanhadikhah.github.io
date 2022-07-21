@@ -407,12 +407,9 @@ var btnsubmit = document.getElementById("btnsub");
 btnsubmit.addEventListener("click", (e) => {
     e.preventDefault();
     if (getelemnts()===true) {
-            // remove with () for removing item//
-            out.remove();            
-            wrongalert.innerHTML = null;
-            siuptext.remove();
-            sigmatext.innerHTML = getuser ;
-            
+                       
+            starttru();
+
             
     }else{
         wrongalert.innerHTML = "somthing wrong";
@@ -425,5 +422,23 @@ btnsubmit.addEventListener("click", (e) => {
         });
     }
 });
+function starttru() {
+    // remove with () for removing item//
+    out.remove();            
+    wrongalert.innerHTML = null;
+    siuptext.remove();
+    sigmatext.innerHTML = getuser ;
+    var h1show = document.createElement("h1");
+    
+    var divh1 = document.getElementById("h1opening");
+    var texth1 = document.createTextNode("wake up "+getuser+"...");
+    h1show.appendChild(texth1);
+    
+    divh1.appendChild(h1show);
+    h1show.classList.add('fadeinclsss');
+    
+    //document.getElementsByTagName("body")[0].appendChild(divh1);
+} 
 
+//starttru();
 
