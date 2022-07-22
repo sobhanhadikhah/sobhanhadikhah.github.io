@@ -436,6 +436,18 @@ function starttru() {
     
     divh1.appendChild(h1show);
     h1show.classList.add('fadeinclsss');
+    var imagel = document.createElement("img");
+    imagel.src = 'pppp.png';
+    imagel.classList.add('fadeinclsss');
+   
+    divh1.appendChild(imagel);
+    imagel.onclick = () =>{
+        var tetxzas = document.createElement("h1");
+        tetxzas.innerHTML = "The Matrix Has You...";
+        divh1.appendChild(tetxzas);
+    };
+
+    
     
     //document.getElementsByTagName("body")[0].appendChild(divh1);
 } 
