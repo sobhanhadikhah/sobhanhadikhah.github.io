@@ -363,7 +363,7 @@ var wrongalert = document.getElementById("tellwrong");
 var databaseuseras = [
     {
         usera:"shomplex",
-        passwordd:"12345678"
+        passwordd:"123mos"
     },
     {
         usera:"sobhan",
@@ -372,6 +372,14 @@ var databaseuseras = [
     {
         usera:"saman007",
         passwordd:"saman12345678"
+    },
+    {
+        usera:"sepanta",
+        passwordd:"boypussylover"
+    },
+    {
+        usera:"sali",
+        passwordd:"witcher007"
     }
 ];
 
@@ -441,16 +449,32 @@ function starttru() {
     imagel.classList.add('fadeinclsss');
    
     divh1.appendChild(imagel);
-    imagel.onclick = () =>{
-        var tetxzas = document.createElement("h1");
-        tetxzas.innerHTML = "The Matrix Has You...";
-        divh1.appendChild(tetxzas);
-    };
+    // 1 for only work once a click in js we use method flag with use var false
+    var settruefales = false;
+    imagel.addEventListener('click',showingthemm =>{
+
+        function showingthemm() {
+            // whene a var is false start and ifter its uset once change var to true it just do it once
+            if (!settruefales) {
+                settruefales = true;
+                var matrixyou = document.createElement("h1");
+             matrixyou.innerHTML = "The Matrix Has you...";
+             matrixyou.classList.add('fadeinclsss');
+            divh1.appendChild(matrixyou);    
+            }
+            
+                
+        }
+        showingthemm();
+        
+       
+    })
 
     
     
     //document.getElementsByTagName("body")[0].appendChild(divh1);
 } 
+
 
 //starttru();
 
