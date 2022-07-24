@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Press Start 2P', cursive;
     background-color: black;
@@ -6,7 +9,33 @@ body{
     
 
 }
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    transition: all 1s;
+    background: #00FF41;
+    border-radius: 40px;
+  }
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2bff00;
+  }
 nav{
+    /*  for the sticky navbar */
+    width: 100%;
+    position: fixed;
+    top: 0px;
     display: flex;
     background-color: #00FF41;
 }
@@ -55,6 +84,7 @@ cursor: pointer;
 }
 
 .inputslist  {
+    z-index: -1;
     display: grid;
     
     
@@ -226,3 +256,38 @@ label p{
         height: 200px;
       }   
 };
+.centeral {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+   
+    font-size: larger;
+    margin-top: 3em;
+}
+.centeral p{
+    text-align: center;
+    color: blue;
+    font-size: larger;   
+}
+.homenavb{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+   
+    font-size: larger;
+    margin-top: 3em;
+}
+.homenavb p{
+    text-align: center;
+    color: blue;
+    font-size: larger;   
+}
+.hidden {
+	display:none;
+}
+
+.visible {
+	display:block;
+}

@@ -359,7 +359,10 @@
         x.innerHTML = "wants to you ";
 
         */
-        
+        var useroncenav = false;
+        var trueorfalsehome = false;
+        var homebtnmmm = document.getElementById("homebtnnav");
+        var lsuserdiv = document.getElementById("listofuser");
         var divh1 = document.getElementById("h1opening");
         sigmatext = document.getElementById("sigin");        
         var wrongalert = document.getElementById("tellwrong");
@@ -433,22 +436,51 @@
         });
         
         function starttru() {
-            var uersnavbarbtn = document.getElementById("usersnav");
-            var useroncenav = false;
-                    uersnavbarbtn.addEventListener('click',()=>{
-                        if (!useroncenav) {
-                            useroncenav = true;
-                            for (let iof = 0; iof < databaseuseras.length; iof++) {
-                                imagel.remove();
-                                var printusers = document.createElement("p");
-                                divh1.appendChild(printusers);
-                                printusers.innerHTML = (iof+1)+"-"+databaseuseras[iof].usera;
+            var homebtn = document.getElementById("home");
+                        homebtn.addEventListener('click',()=>{
+                            if (trueorfalsehome===false) {
+                                useroncenav = false ;
+                                trueorfalsehome = true;
+                                imagel.classList.add("hidden");
+                                var psshowhome = document.createElement("p");
+                                psshowhome.innerHTML = "sins";
+                                psshowhome.classList.add('homenavb');
+                                homebtnmmm.appendChild(psshowhome);
+                                lsuserdiv.classList.add("hidden");
                                 
+                            }
                             
-                        }    
+                        });
+            
+            var uersnavbarbtn = document.getElementById("usersnav");
+            function oilme() {
+                for (let iof = 0; iof < databaseuseras.length; iof++) {
+                    imagel.classList.add("hidden");
+                    var printusers = document.createElement("p");                    
+                    lsuserdiv.appendChild(printusers);
+                    printusers.classList.add('centeral','fadeinclsss');
+                    printusers.innerHTML = (iof+1)+"-"+"user"+":"+databaseuseras[iof].usera;
+                    
+                    
+                }    
+            }
+            
+                    uersnavbarbtn.addEventListener('click',()=>{
+                        
+                        if (useroncenav===false) {
+                            trueorfalsehome = false;
+                            useroncenav = true;
+                            
+                            oilme(); 
+                    
+
                         }
                         
-                    })
+                        
+                        
+                    });
+                    
+                        
             // remove with () for removing item//
             out.remove();            
             wrongalert.innerHTML = null;
@@ -498,6 +530,8 @@
 
             //document.getElementsByTagName("body")[0].appendChild(divh1);
         } 
+        
+        
       
         
         
