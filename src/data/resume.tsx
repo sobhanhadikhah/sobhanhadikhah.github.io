@@ -42,7 +42,7 @@ export const DATA = {
   name: "Sobhan Hadikhah",
   initials: "SH",
   // TODO: set your real domain before building (used for canonical URLs, sitemap, Open Graph).
-  url: "https://example.com",
+  url: "https://sobhanhadikhah.github.io/",
   jobTitle: "Frontend Developer",
   location: "Tehran, Iran",
   locationLink: "https://www.google.com/maps/place/Tehran",
